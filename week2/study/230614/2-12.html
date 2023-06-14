@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+<link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Kablammo&display=swap" rel="stylesheet">
+
+    <style>
+        .font{
+            font-family: 'East Sea Dokdo', cursive;
+        }
+        p{
+            font-size: 60px;
+            text-align: center;
+        }
+        .pagenation{
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        .pagenation li{
+            margin: 0 5px;
+        }
+        
+        .pagenation li a{
+            display: block;
+            background-color: lightpink;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+
+        .pagenation li a:hover{
+            background-color: gray;
+            color: white;
+        }
+
+        .pagenation li.active a{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="font">Here !!!</p>
+        <ul class="pagenation">
+           <li class="active"><a href="#">1</a></li>
+           <li><a href="#">2</a></li>
+           <li><a href="#">3</a></li>
+           <li><a href="#">4</a></li>
+           <li><a href="#">5</a></li>
+        </ul>
+
+</body>
+</html>

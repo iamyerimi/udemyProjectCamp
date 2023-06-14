@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+    src="https://kit.fontawesome.com/69f5245cad.js"
+    crossorigin="anonymous"
+  ></script>
+
+    <style>
+      body {
+        margin: auto;
+        padding: 0;
+        position: relative;
+      }
+
+      .container {
+        background-color: white;
+        width: 100%;
+        display: grid;
+        position: fixed;
+        grid-template-columns: repeat(7, 1fr);
+        /* grid-template-rows: repeat(1, 1fr); */
+        gap: 0px 0px;
+        column-gap: 10px;
+        z-index: 1;
+        text-align: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      #blog {
+        color: blue;
+      }
+
+      .nav {
+        font-weight: bold;
+      }
+
+
+      /* contentBoc */
+      .contentBox {
+        width: 350px;
+        padding-top: 70px;
+      }
+
+      .wrap {
+        display: grid;
+        grid-template-columns: repeat(3, 2fr);
+        /* grid-template-rows: repeat(1, 1fr); */
+        gap: 30px 30px;
+        column-gap: 10px;
+        
+      }
+
+      .imgDiv{
+        overflow: hidden;
+      }
+
+      .images{
+        width: 350px;
+        height: 150px;
+
+        transition-property:all;
+        transition-duration: 1s;
+/* 
+        -webkit-transition: width .35s ease-in-out;
+        transition: width .35s exzase-in-out; */
+      }
+
+  
+      .images:hover{
+        width: 380px;
+        height: 180px;
+      }
+
+      .chichi{
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .explain{
+        padding: 10px;
+      }
+
+      /* 더 알아보기 button */
+      .more{
+        background-color: blue;
+        color: white;
+        width: 100%;
+        padding: 10px;
+        border-radius: 15px;
+      }
+
+      /* 뱃지 */
+      .badge{
+        font-size: 12px;
+        display: inline-block;
+        background-color: lightgreen;
+        padding: 5px;
+        border-radius: 10px;
+      }
+
+
+      
+    </style>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <div class="container">
+        <div class="nav"><img src="./sfac.svg" width="100px" alt="" /></div>
+        <div class="nav">스팩소개</div>
+        <div class="nav">
+          교육과정
+          <div class="circle" id="circle1"></div>
+        </div>
+        <div class="nav">공지사항</div>
+        <div class="nav">수료생 커뮤니티</div>
+        <div class="nav">협력사</div>
+        <div class="nav" id="blog">스팩블로그</div>
+      </div>
+      
+      <div class="contentBox">
+        <div class="imgDiv">
+          <img class="images" src="https://www.olchiolchi.com/wp-content/uploads/2020/07/2-2.jpg" alt="" />
+        </div>
+        <div class="explain">
+          <div>
+            <p class="badge">신청가능</p>
+          </div>
+          <div>
+            <p>
+              Flutter 모바일 어플리케이션 부트캠프를
+              모집합니다링가링가링링가링가링
+            </p>
+            <p>
+              Flutter 모바일 어플리케이션 부트캠프를
+              모집합니다링가링가링링가링가링 어쩌구블라블라 모집을하니까
+              마니마니 지원해주세요 마니마니 마니마니배워요 밥도 먹고 망고도
+              먹고 배도 부르고 만약에 니가 간다면 니가 떠나간다면
+            </p>
+          </div>
+          <div class="chichi">
+            <p class="badge" style="background-color:lightgrey;">취업연계과정</p>
+            <p>기수: 3기 🚀</p>
+          </div>
+          <div>
+            <button class="more"><i class="fa-light fa-circle-play"></i> 더 알아보기</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="contentBox">
+        <div>
+          <img class="images" src="https://www.olchiolchi.com/wp-content/uploads/2020/07/2-2.jpg" alt="" />
+        </div>
+        <div class="explain">
+          <div>
+            <p>신청가능</p>
+          </div>
+          <div>
+            <p>
+              Flutter 모바일 어플리케이션 부트캠프를
+              모집합니다링가링가링링가링가링
+            </p>
+            <p>
+              Flutter 모바일 어플리케이션 부트캠프를
+              모집합니다링가링가링링가링가링 어쩌구블라블라 모집을하니까
+              마니마니 지원해주세요 마니마니 마니마니배워요 밥도 먹고 망고도
+              먹고 배도 부르고 만약에 니가 간다면 니가 떠나간다면
+            </p>
+          </div>
+          <div>
+            <p>취업연계과정</p>
+            <p>기수: 3기 (아이콘)</p>
+          </div>
+          <div>
+            <button>(아이콘) 더 알아보기</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="contentBox">
+        <div>
+          <img class="images" src="https://www.olchiolchi.com/wp-content/uploads/2020/07/2-2.jpg" alt="" />
+        </div>
+        <div class="explain">
+          <div>
+            <p>신청가능</p>
+          </div>
+          <div>
+            <p>
+              Flutter 모바일 어플리케이션 부트캠프를
+              모집합니다링가링가링링가링가링
+            </p>
+            <p>
+              Flutter 모바일 어플리케이션 부트캠프를
+              모집합니다링가링가링링가링가링 어쩌구블라블라 모집을하니까
+              마니마니 지원해주세요 마니마니 마니마니배워요 밥도 먹고 망고도
+              먹고 배도 부르고 만약에 니가 간다면 니가 떠나간다면
+            </p>
+          </div>
+          <div>
+            <p>취업연계과정</p>
+            <p>기수: 3기 (아이콘)</p>
+          </div>
+          <div>
+            <button>(아이콘) 더 알아보기</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="contentBox">
+        <div>
+          <img class="images" src="https://www.olchiolchi.com/wp-content/uploads/2020/07/2-2.jpg" alt="" />
+        </div>
+        <div class="explain">
+          <div>
+            <p>신청가능</p>
+          </div>
+          <div>
+            <p>
+              Flutter 모바일 어플리케이션 부트캠프를
+              모집합니다링가링가링링가링가링
+            </p>
+            <p>
+              Flutter 모바일 어플리케이션 부트캠프를
+              모집합니다링가링가링링가링가링 어쩌구블라블라 모집을하니까
+              마니마니 지원해주세요 마니마니 마니마니배워요 밥도 먹고 망고도
+              먹고 배도 부르고 만약에 니가 간다면 니가 떠나간다면
+            </p>
+          </div>
+          <div>
+            <p>취업연계과정</p>
+            <p>기수: 3기 (아이콘)</p>
+          </div>
+          <div>
+            <button>(아이콘) 더 알아보기</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="contentBox">
+        <div>
+          <img class="images" src="https://www.olchiolchi.com/wp-content/uploads/2020/07/2-2.jpg" alt="" />
+        </div>
+        <div class="explain">
+          <div>
+            <p>신청가능</p>
+          </div>
+          <div>
+            <p>
+              Flutter 모바일 어플리케이션 부트캠프를
+              모집합니다링가링가링링가링가링
+            </p>
+            <p>
+              Flutter 모바일 어플리케이션 부트캠프를
+              모집합니다링가링가링링가링가링 어쩌구블라블라 모집을하니까
+              마니마니 지원해주세요 마니마니 마니마니배워요 밥도 먹고 망고도
+              먹고 배도 부르고 만약에 니가 간다면 니가 떠나간다면
+            </p>
+          </div>
+          <div>
+            <p>취업연계과정</p>
+            <p>기수: 3기 (아이콘)</p>
+          </div>
+          <div>
+            <button>(아이콘) 더 알아보기</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="contentBox">
+        <div>
+          <img class="images" src="https://www.olchiolchi.com/wp-content/uploads/2020/07/2-2.jpg" alt="" />
+        </div>
+        <div class="explain">
+          <div>
+            <p>신청가능</p>
+          </div>
+          <div>
+            <p>
+              Flutter 모바일 어플리케이션 부트캠프를
+              모집합니다링가링가링링가링가링
+            </p>
+            <p>
+              Flutter 모바일 어플리케이션 부트캠프를
+              모집합니다링가링가링링가링가링 어쩌구블라블라 모집을하니까
+              마니마니 지원해주세요 마니마니 마니마니배워요 밥도 먹고 망고도
+              먹고 배도 부르고 만약에 니가 간다면 니가 떠나간다면
+            </p>
+          </div>
+          <div>
+            <p>취업연계과정</p>
+            <p>기수: 3기 </i></p>
+          </div>
+          <div>
+            <button>(아이콘) 더 알아보기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

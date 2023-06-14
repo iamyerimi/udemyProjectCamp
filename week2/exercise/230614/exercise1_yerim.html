@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML - 실습 1</title>
+    <link rel="stylesheet" href="./exercise1_yerim.css" />
+  </head>
+  <body>
+    <!-- 조건1. 시맨틱 태그 사용
+    2. html 태그 10개 이상 사용 (dl, dt, dd 태그 포함)
+    3. 나에 대하여 최소 10개 이상 작성하기
+    ex. mbti, 취미, 특기, 이상형, 취업하고자 하는 회사 등 -->
+
+    <header>
+      <h1>예리미의 자기소개</h1>
+    </header>
+
+    <marquee behavior="" direction="">
+      안뇽하세요
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 안뇽히 가세요
+    </marquee>
+
+    <nav>
+      <ul>
+        <li><a href="">home</a></li>
+        <li><a href="">more...</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section class="info">
+        <div>
+          <h2>기본 정보</h2>
+        </div>
+        <div>
+          <img src="../../study/img/IMG_2268.jpeg" id="mypic" alt="" />
+          <ul>
+            <li class="list">이름: 손예림</li>
+            <li class="list">나이: 젊음..</li>
+            <li class="list">거주지: 김포</li>
+            <li class="list">MBTI: 정상</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="info">
+        <h2>좋아하는 음식</h2>
+        <ul>
+          <li class="list">양꼬치</li>
+          <li class="list">포케</li>
+          <li class="list">멕시칸푸드</li>
+          <li class="list">탕후루 등 달콤한 간식..</li>
+          <li class="list">가리는 거 없이 다 좋아함</li>
+        </ul>
+      </section>
+
+      <section class="info">
+        <h2>나의 이상형...🌹</h2>
+        <p>신체적, 정신적으로 건강한 사람</p>
+        <p>잘 챙겨주는 사람</p>
+      </section>
+
+      <section class="info">
+        <form action="">
+          <label for="">인사를 보내주세요!</label>
+          <input type="text" id="greeting-input" />
+          <button id="send-button">보내기</button>
+        </form>
+      </section>
+      <section class="info">
+        <h2>읽고 있는 책</h2>
+        <a href="https://www.yes24.com/Product/Goods/85952074"
+          ><img
+            src="https://image.yes24.com/goods/85952074/XL"
+            width="150"
+            alt="러셀서양철학사"
+        /></a>
+        <p>1페이지 읽었음</p>
+      </section>
+      <section class="info">
+        <button><a href="https://github.com/iamyerimi/">github</a></button>
+        <button>
+          <a href="https://iamyerimi.github.io"
+            >blog인데 갑자기 포스트가 다 안보여요ㅠ</a
+          >
+        </button>
+      </section>
+    </main>
+
+    <footer>
+      <h2>copyright 손예림</h2>
+    </footer>
+
+    <script>
+      function greet() {
+        alert("안녕하세요! 감사합니다.");
+      }
+
+      var sendButton = document.getElementById("send-button");
+      sendButton.addEventListener("click", greet);
+    </script>
+  </body>
+</html>

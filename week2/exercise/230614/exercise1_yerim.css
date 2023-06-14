@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    background-color: lightgrey;
+    text-align: center;
+    padding: 50px;
+  }
+  header h1:hover {
+    color: hotpink;
+  }
+
+  marquee {
+    background-color: lightgreen;
+    padding: 5px;
+  }
+
+  nav {
+    background-color: lightskyblue;
+    padding: 10px;
+  }
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  nav ul li {
+    display: inline-block;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  nav ul li a {
+    color: black;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+  }
+
+  nav ul li a:hover {
+    color: hotpink;
+  }
+
+
+  /* main */
+
+  /* 프로필사진 */
+  #mypic{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+  }
+
+  /* 기본정보 */
+
+  section ul{
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .list{
+    display: flex;
+    list-style-type: none;
+    padding: 10px;
+   
+   
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    background-color: antiquewhite;
+    align-items: center;
+    text-align: center;
+  }
+
+  .info{
+    /* display: flex; */
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    border: 1px solid skyblue;
+  }
+
+  footer {
+    background-color: lightgrey;
+    text-align: center;
+    padding: 50px;
+  }
