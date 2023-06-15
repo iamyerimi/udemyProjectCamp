@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>230615과제 - whoAmI</title>
+    <script
+    src="https://kit.fontawesome.com/69f5245cad.js"
+    crossorigin="anonymous"
+    ></script>
+
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 0 300px;
+      }
+
+      header {
+        padding: 20px 0;
+      }
+      /* .profilePic img {
+        border-radius: 50%;
+      } */
+
+       .profilePic img{
+        border-radius: 50%;
+        border: 10px solid transparent;
+        background-image: linear-gradient(#fff, #fff),
+          linear-gradient(to right, red 0%, orange 100%);
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+      } 
+
+      .info {
+        margin-bottom: 20px;
+      }
+      .info ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+      }
+
+      .info ul li {
+        display: inline-block;
+        margin: 10px;
+      }
+
+      #myKeyword {
+        width: 100%;
+        border: 1px dashed gray;
+        padding: 15px 0;
+        box-sizing: border-box; /* 박스 크기에 padding 포함 */
+      }
+
+      .myKeyword:hover{
+        cursor: pointer;
+      }
+
+      #myKeywordWrap{
+        display: inline-block;
+
+      }
+
+      .myKeyword{
+        display: flex;
+        background-color: lightpink;
+        padding: 5px;
+        justify-content: space-between;
+      }
+      
+      .greetingMent {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: left;
+        line-height: 1.7;
+        /* letter-spacing: 0.2px; */
+      }
+
+      #hi {
+        font-size: large;
+        font-weight: bold;
+      }
+
+      .infoDetails {
+        display: none;
+      }
+
+      .active {
+        display: block;
+      }
+
+      footer{
+        padding: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Hi! I'm Yerim, a FE developer.</h1>
+    </header>
+
+    <!-- info 1. greeting -->
+    <div class="info" id="info1">
+      <div class="profilePic">
+        <img width="300px" src="./img/profile.jpeg" alt="" />
+      </div>
+
+      <div id="myLink">
+        <ul>
+          <li><span><i style="margin-right: 5px;" class="fa-brands fa-blogger"></i></span><a href="https://iamyerimi.github.io">BLOG</a></li>
+          <li><i style="margin-right: 5px;" class="fa-brands fa-github"></i><a href="https://github.com/iamyerimi">GITHUB</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- end. info 1 -->
+
+    <div class="info">
+      <div class="greetingMent">
+        <span id="hi">안녕하세요! 프론트엔드 개발자 손예림입니다. </span><br />
+        열정 넘치는 주니어 FE 개발자로서, 새로운 기술과 사용자 경험에 집중하며
+        웹 개발에 몰두하고 있습니다.<br />
+        <!-- HTML, CSS, JavaScript를 통해 깔끔하고 사용자 친화적인 UI/UX를 구현하는 데 주력하며, React 또는 Vue와 같은 프론트엔드 프레임워크를 사용하여 동적이고 반응형 웹을 개발하고 있습니다.<br/> -->
+
+        끊임없는 학습과 자기계발을 통해 새로운 기술과 도구에 대한 이해도를
+        높이고, 문제 해결 능력을 향상시키고 있습니다. <br />
+        팀과의 협업을 통해 목표 달성을 위해 적극적으로 참여하며, 효율적이고
+        창의적인 솔루션을 제공하기 위해 노력합니다. <br />
+        동시에, 성장과 발전을 위해 끊임없이 도전하며, 주니어 개발자로서의 역량을
+        키우기 위해 열심히 노력하고 있습니다.<br />
+
+        <!-- 저의 열정과 전문성으로 함께 성장하고 발전하는 기회를 얻을 수 있기를
+        기대합니다. -->
+      </div>
+    </div>
+    <hr />
+
+    <!-- info 2 -->
+    <div class="info" id="myKeyword">
+      <div id="myKeywordWrap">
+        <span> keyword click! </span>
+        <ul>
+          <li class="myKeyword" id="mbti">MBTI</li>
+          <li class="myKeyword" id="hometown">김포시민</li>
+          <li class="myKeyword" id="music">랩과 R&amp;B</li>
+          <li class="myKeyword" id="color">파란색</li>
+          <li class="myKeyword" id="hobby">독서와 산책</li>
+          <li class="myKeyword" id="food">햄버거</li>
+          <li class="myKeyword" id="sweets">탕후루</li>
+          <li class="myKeyword" id="sea">바다</li>
+        </ul>
+      </div>
+
+      <div class="info">
+        <div class="infoDetails" id="mbtiDetails">
+          <p>정상❤️</p>
+          <img width="300px" src="./img/dance.jpeg" alt="">
+        </div>
+        <div class="infoDetails" id="hometownDetails">
+          <p>출신지: 김포시민</p>
+          <p>김포시에 대한 설명 내용입니다.</p>
+        </div>
+        <div class="infoDetails" id="musicDetails">
+          <p>좋아하는 음악: 랩과 R&amp;B</p>
+          <p>최근 다시 듣는 노래입니다. 드라이브 할 때 짱👍</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/YVHwK95-pGU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="infoDetails" id="colorDetails">
+          <p>좋아하는 색상: 파란색</p>
+          <img  width="300px"  src="./img/blue.jpg" alt="">
+        </div>
+        <div class="infoDetails" id="hobbyDetails">
+          <p>취미: 독서와 산책</p>
+          <p>취미에 대한 설명 내용입니다.</p>
+        </div>
+        <div class="infoDetails" id="foodDetails">
+          <p>좋아하는 음식: 햄버거</p>
+          <p>월요일 첫 수업 후 먹은 쉑쉑버거🍔</p>
+          <img  width="300px"  src="./img/햄버거.jpeg" alt="">
+        </div>
+        <div class="infoDetails" id="sweetsDetails">
+          <p>좋아하는 간식: 탕후루</p>
+          <p>최근 사진이 없어 일러스트 외주 맡겼어요</p>
+          <img  width="300px"  src="./img/탕후루.jpg" alt="">
+        </div>
+        <div class="infoDetails" id="seaDetails">
+          <p>좋아하는 장소: 바다</p>
+          <img width="500px" src="./img/바다.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>© 2023 Yerim Son. All rights reserved.</p>
+    </footer>
+
+    <script>
+      var keywordItems = document.querySelectorAll(".myKeyword");
+      var infoDetails = document.querySelectorAll(".infoDetails");
+
+      keywordItems.forEach(function (item) {
+        item.addEventListener("click", function () {
+          var itemId = this.getAttribute("id");
+          var targetDetails = document.getElementById(itemId + "Details");
+
+          infoDetails.forEach(function (details) {
+            details.classList.remove("active");
+          });
+
+          targetDetails.classList.add("active");
+        });
+      });
+    </script>
+
+    <!-- <script>
+      function greet() {
+        alert("안녕하세요! 감사합니다.");
+      }
+      var sendButton = document.getElementById("send-button");
+      sendButton.addEventListener("click", greet);
+    </script> -->
+  </body>
+</html>
