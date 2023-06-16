@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>exercise4_imageSlider</title>
+    <!-- js 이미지 슬라이더 만들기 -->
+    <!-- 조건
+            1. 이전 버튼을 클릭하면 이전 이미지로 변경
+            2. 다음 버튼을 클릭하면 다음 이미지로 변경
+            3. 순수 바닐라 자바스크립트로 만들기
+            4. 팀원들에게 멋진 사진들을 받아서 팀원들의 이미지를 사용 -->
+
+    <style>
+      button {
+        padding: 20px;
+        background-color: lightpink;
+      }
+
+      #btn {
+        text-align: center;
+        margin: 20px;
+      }
+
+      #imgDiv {
+        text-align: center;
+      }
+
+      img {
+        width: 500px;
+      }
+
+      h1 {
+        font-size: 30px;
+        color: red;
+        font-style: italic;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 재욱님 방법 -->
+    <!-- <div id="galleryZone">
+      <p>
+        <img
+          src="images/1.png"
+          id="photo"
+          alt=""
+          style="width: 300px; height: 300px"
+        />
+      </p>
+      <p>
+        <button onclick="gallery(0)">이전</button>
+        <button onclick="gallery(1)">다음</button>
+      </p>
+    </div> -->
+    <!-- 재욱님 방법 끝-->
+
+
+    <div id="btn">
+      <button id="prev">prev</button>
+      <button id="next">next</button>
+    </div>
+    
+    <div id="imgDiv">
+      <marquee><h1>멋지다 !!!</h1></marquee>
+      <img id="image" src="" alt="" />
+    </div>
+
+    <script>
+      let index = 0;
+
+      let prev = document.getElementById("prev");
+      let next = document.getElementById("next");
+      let img = document.getElementById("image");
+      // let path = "../img/"
+      let imgArray = [
+        "../img/손예림.jpeg",
+        "../img/신재욱.png",
+        "../img/이아현.jpg",
+        "../img/유재석.png",
+      ];
+
+      // 초기 이미지 설정
+      window.addEventListener("load", function () {
+        img.src = imgArray[0];
+      });
+
+      // prev Button click event
+      prev.addEventListener("click", function () {
+        index--;
+        if (index < 0) {
+          index = 0;
+        }
+        img.src = imgArray[index];
+      });
+
+      // next button click event
+      next.addEventListener("click", function () {
+        index++;
+        if (index > 3) {
+          index = 3;
+        }
+        img.src = imgArray[index];
+      });
+    </script>
+
+    <!-- <script>
+      // 재욱님 방법
+      var num = 1;
+      function gallery(direct) {
+        if (direct) {
+          if (num == 6) return; //여기서 8은 최대치를 뜻한다.!
+          num++;
+        } else {
+          if (num == 1) return;
+          num--;
+        }
+
+        var imgTag = document.getElementById("photo");
+        imgTag.setAttribute("src", "images/" + num + ".png");
+      }
+      //재욱님 방법 끝
+    </script> -->
+  </body>
+</html>

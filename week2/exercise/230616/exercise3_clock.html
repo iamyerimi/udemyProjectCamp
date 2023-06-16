@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercise3</title>
+
+    <style>
+        button{
+            padding: 30px;
+            font-size: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- 실시간으로 변경되는 시계 만들기 (hint: Date()) -->
+    <h1 id="clock"></h1>    
+
+    <script>
+        
+        let clock = document.getElementById("clock");
+
+        function updateTime(){
+            let date = new Date()
+            // console.log(date);
+            clock.innerHTML = date.getHours() + "시 " + date.getMinutes() + "분 " + date.getSeconds() + "초";
+        }
+        setInterval(updateTime, 1000);
+        // console.log(date);
+        
+    </script>
+</body>
+</html>

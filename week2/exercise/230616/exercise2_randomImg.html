@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- hint: math.random 사용 -->
+    <div>
+        <img id="image" src="../img/강아지.jpeg" alt="">
+    </div>
+
+    <script>
+
+        let img = document.getElementById("image");
+        let imgArray = ["/강아지.jpeg", "/고윤정.png", "/마동석.jpg", "/유재석.png", "/이경규.jpg", "/한소희.jpg"];
+
+        img.addEventListener('click', function(){
+            let main = imgArray[Math.floor(Math.random() * imgArray.length)];
+            console.log("main : " + main);
+            img.src = "../img" + main;
+        })
+        
+    </script>
+</body>
+</html>
