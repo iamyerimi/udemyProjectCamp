@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script> -->
+    <title>0613 필수 과제</title>
+
+    <!-- 세이프홈즈 랜딩페이지 html 클론코딩 -->
+
+    <!-- 구조파악용 css -->
+    <style>
+      body {
+        position: relative;
+        width: 100%;
+        margin: 0;
+      }
+
+      /* header css */
+      #header {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      h1 {
+        margin: 0;
+      }
+
+      .headerDiv {
+        display: flex;
+        margin: 22px;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .headerBtn {
+        border-radius: 4px;
+        font-size: 12px;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 14px;
+
+        height: 30px;
+        width: 90px;
+        margin-left: 10px;
+      }
+
+      #startBtn {
+        background: #0e7159;
+        color: white;
+      }
+
+      #header2 {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      #logo {
+        margin-right: 10px;
+      }
+
+      /* infoWrap */
+      #infoWrap {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* mainBanner css */
+      #mainBanner {
+        width: 100%;
+        height: 768px;
+        background-image: url("./images/architecture.png");
+        justify-content: center;
+        align-items: center;
+        display: flex;
+      }
+
+      .mainText {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 72px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: -2.24473px;
+
+        color: #ffffff;
+      }
+
+      .mainLink {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+        /* identical to box height */
+        display: flex;
+        align-items: center;
+        letter-spacing: -0.897892px;
+
+        color: #ffffff;
+      }
+
+      #mainTextDiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      /* info1 css */
+      .TitleText {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 58px;
+        /* identical to box height */
+        display: flex;
+        align-items: center;
+        letter-spacing: -1.79578px;
+
+        color: #0e7159;
+      }
+
+      .info1_btnDiv{
+        padding: 30px;
+      }
+      #info1 {
+        margin: 125px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+      }
+      #info1_content {
+        display: flex;
+        width: 975px;
+        height: 400px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #info1_title {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        width: 100%;
+      }
+
+      .info1_img {
+        width: 293px;
+        height: 223px;
+        overflow: hidden;
+      }
+
+      .info1_box {
+        width: 293px;
+        height: 399px;
+        margin: 24px;
+      }
+
+      .info1_innerText {
+        text-align: left;
+      }
+
+      .info1_innerText_title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 21px;
+        line-height: 25px;
+        display: flex;
+        align-items: center;
+        letter-spacing: -0.785656px;
+
+        color: #333d4b;
+      }
+
+      .info1_innerText_ex {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 26px;
+        /* or 162% */
+        display: flex;
+        align-items: center;
+        letter-spacing: -0.598595px;
+
+        color: #6b7684;
+      }
+
+      .info1_btn {
+        font-size: 18px;
+        line-height: 22px;
+        /* identical to box height */
+        /* display: flex; */
+        align-items: center;
+        letter-spacing: -0.673419px;
+        margin-top: 25px;
+
+        color: #0e7159;
+      }
+
+      /* info 4 */
+      /* 폰 이미지 있는 곳 */
+      .info4 {
+        display: flex;
+        justify-content: center;
+        width: 975px;
+      }
+
+      .info4_content {
+        justify-content: left;
+        margin: 0 50px 0 50px;
+      }
+
+      .info4_greenTxt {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+        /* identical to box height */
+        display: flex;
+        align-items: center;
+        letter-spacing: -0.897892px;
+
+        color: #0e7159;
+      }
+
+      .info4_titleTxt {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 58px;
+        display: flex;
+        align-items: center;
+        letter-spacing: -1.79578px;
+
+        color: #333d4b;
+      }
+
+      .info4_mainTxt {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 40px;
+        /* or 167% */
+        display: flex;
+        align-items: center;
+        letter-spacing: -0.897892px;
+
+        color: #6b7684;
+      }
+
+      .phoneImg {
+        height: 679px;
+        width: 335px;
+      }
+
+      /* 메세지 */
+      .msgDiv {
+        background: rgba(245, 245, 245, 0.6);
+        backdrop-filter: blur(27.1828px);
+        /* Note: backdrop-filter has minimal browser support */
+        border-radius: 13px;
+        padding: 0;
+        margin: 0;
+        padding: 0px 16px 0px 16px;
+        width: 451px;
+        margin-bottom: 17px;
+      }
+
+      .msgHeadDiv {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+      }
+
+      .msgFrom {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+      }
+
+      .msgFromText {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 16px;
+        /* identical to box height */
+        letter-spacing: -0.31px;
+      }
+
+      .msgImg {
+        margin-right: 5px;
+      }
+
+      .msgTitle {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 20px;
+        /* identical to box height, or 133% */
+        letter-spacing: -0.24px;
+        margin: 0;
+        color: #000000;
+      }
+
+      .msgText {
+        font-family: "SF Pro Text";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+        /* or 120% */
+        letter-spacing: -0.24px;
+        margin: 0;
+        color: #000000;
+      }
+
+      /* info 5 */
+      .info5_Title {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+        display: flex;
+        align-items: center;
+        letter-spacing: -0.897892px;
+
+        color: #333d4b;
+      }
+
+      .info5_price {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 38px;
+        display: flex;
+        align-items: center;
+        letter-spacing: -1.19719px;
+
+        color: #0e7159;
+      }
+
+      .info5_btn {
+        background: #0e7159;
+        border-radius: 8px;
+        color: white;
+        padding: 15px 30px;
+        text-align: center;
+      }
+
+      #contentWrap {
+        display: inline-block;
+      }
+
+      /* info 5 */
+      .info5_box {
+        width: 293px;
+        height: 399px;
+        margin: 24px;
+        background: #f2f3f4;
+        border-radius: 16px;
+        padding: 24px;
+      }
+
+      /* bottom banner */
+      .btm_banner {
+        height: 608px;
+        background: #0e7159;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .bottomLink {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        padding: 15px;
+        background: #ffffff;
+        border-radius: 8px;
+        color: #0e7159;
+      }
+
+      /* footer */
+      footer {
+        padding: 10px 300px;
+      }
+
+      .footer_title {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+
+        color: #333d4b;
+      }
+      .footer_txt {
+        color: #6b7684;
+      }
+
+      /* review */
+      .review_slider {
+        display: flex;
+        /* overflow-x: auto; */
+        /* scroll-behavior: smooth; */
+        /* white-space: nowrap; */
+        /* width: 100%; */
+        /* background-color: #333; */
+        overflow: auto;
+        /* white-space: nowrap; */
+        padding: 10px;
+      }
+
+      .review_box {
+        /* width: 680px; */
+        /* height: 360px; */
+
+        flex: 0 0 680px;
+        margin: 20px;
+        padding: 50px;
+        /* box-sizing: border-box; */
+        align-items: center;
+        justify-content: center;
+        align-content: space-between;
+        background: #f2f3f4;
+        border-radius: 16px;
+      }
+
+      .review_txt {
+        padding-top: 40px;
+        word-wrap: break-word;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 32px;
+        /* or 178% */
+        display: flex;
+        align-items: center;
+        letter-spacing: -0.673419px;
+      }
+
+      .review_profile {
+        display: flex;
+        margin-right: 20px;
+        text-align: center;
+        justify-content: left;
+
+        align-items: center;
+      }
+
+      .profile_name {
+        text-align: left;
+        margin-left: 20px;
+      }
+      
+      .reviewWrap{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 랜딩페이지 -->
+    <!-- header -->
+    <header id="header">
+      <div class="headerDiv" id="header1">
+        <h1><img id="logo" src="./images/Shape.svg" alt="" />세이프홈즈</h1>
+      </div>
+
+      <div class="headerDiv" id="header2">
+        <button class="headerBtn">문의하기</button>
+        <button class="headerBtn" id="startBtn">시작하기</button>
+      </div>
+    </header>
+
+    <!-- main -->
+    <main>
+      <!-- main banner -->
+      <div id="mainBanner">
+        <div id="mainTextDiv">
+          <p style="text-align: center" class="mainText">
+            내 집 보증금,<br />
+            경매로 날아가면 어떻게 하지?
+          </p>
+          <p style="text-align: center">
+            <a href="" class="mainLink"> 지금 걱정 해결하기 ></a>
+          </p>
+        </div>
+      </div>
+
+      <div id="infoWrap">
+        <!-- info 1 -->
+        <div id="info1">
+          <div id="info1_title">
+            <h3 class="TitleText">
+              세이프홈즈, <strong>전/월세 보증금 지킴이 서비스입니다.</strong>
+            </h3>
+          </div>
+          <div id="info1_content">
+            <div class="info1_box">
+              <div>
+                <img class="info1_img" src="./images/Rectangle.svg" alt="" />
+              </div>
+              <div class="info1_innerText">
+                <p class="info1_innerText_title">
+                  등기부등본 등을 분석한<br />
+                  보증금 지킴이 리포트
+                </p>
+                <p class="info1_innerText_ex">
+                  내 보증금을 어떻게 지킬 수 있을까? 라는 단계를 거쳐서
+                  여러분들에게 계약전 보증금 지킴이 리포트 제공
+                </p>
+              </div>
+            </div>
+            <div class="info1_box">
+              <div>
+                <img class="info1_img" src="./images/Rectangle-2.svg" alt="" />
+              </div>
+              <div class="info1_innerText">
+                <p class="info1_innerText_title">
+                  보증금 보호를 위한<br />
+                  Check-List
+                </p>
+                <p class="info1_innerText_ex">
+                  내 보증금을 어떻게 지킬 수 있을까? 라는 단계를 거쳐서
+                  여러분들에게 계약전 보증금 지킴이 리포트 제공
+                </p>
+              </div>
+            </div>
+            <div class="info1_box">
+              <div>
+                <img class="info1_img" src="./images/Rectangle-3.svg" alt="" />
+              </div>
+              <div class="info1_innerText">
+                <p class="info1_innerText_title">
+                  등기부등본 변동에 따른<br />
+                  실시간 알림 서비스
+                </p>
+                <p class="info1_innerText_ex">
+                  내 보증금을 어떻게 지킬 수 있을까? 라는 단계를 거쳐서
+                  여러분들에게 계약전 보증금 지킴이 리포트 제공
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- info 2 -->
+        <div id="info1">
+          <div id="info1_title">
+            <h3 class="TitleText">부동산을 찾았지만 망설이고 계시나요?</h3>
+          </div>
+          <div id="info1_content">
+            <div class="info1_box">
+              <div>
+                <img class="info1_img" src="./images/Rectangle-4.svg" alt="" />
+              </div>
+              <div class="info1_innerText">
+                <p class="info1_innerText_title">
+                  부동산 중개 업자는 항상 괜찮다고 한다. 과연 그럴까?
+                </p>
+                <p class="info1_innerText_ex">
+                  내 보증금을 어떻게 지킬 수 있을까? 라는 단계를 거쳐서
+                  여러분들에게 계약전 보증금 지킴이 리포트 제공
+                </p>
+              </div>
+            </div>
+            <div class="info1_box">
+              <div>
+                <img class="info1_img" src="./images/Rectangle-5.svg" alt="" />
+              </div>
+              <div class="info1_innerText">
+                <p class="info1_innerText_title">
+                  절차가 이것저것 너무 많은데 빠뜨린 절차가 있지 않을까?
+                </p>
+                <p class="info1_innerText_ex">
+                  내 보증금을 어떻게 지킬 수 있을까? 라는 단계를 거쳐서
+                  여러분들에게 계약전 보증금 지킴이 리포트 제공
+                </p>
+              </div>
+            </div>
+            <div class="info1_box">
+              <div>
+                <img class="info1_img" src="./images/Rectangle-6.svg" alt="" />
+              </div>
+              <div class="info1_innerText">
+                <p class="info1_innerText_title">
+                  평생 힘들게 모은 보증금을 나중에 돌려 받지 못 하면 ..
+                </p>
+                <p class="info1_innerText_ex">
+                  내 보증금을 어떻게 지킬 수 있을까? 라는 단계를 거쳐서
+                  여러분들에게 계약전 보증금 지킴이 리포트 제공
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="info1_btnDiv">
+            <p class="info1_btn">지금 바로 사용하기 ></p>
+          </div>
+        </div>
+
+        <!-- info 3 -->
+        <div id="info1">
+          <div id="info1_title">
+            <h3 class="TitleText">
+              세이프홈즈, 어떻게 내 보증금을 지킬 수 있을까요?
+            </h3>
+          </div>
+          <div id="info1_content">
+            <div class="info1_box">
+              <div class="info1_innerText">
+                <p>#1</p>
+                <p class="info1_innerText_title">계약 전 주소 검색</p>
+                <p class="info1_innerText_ex">
+                  내 보증금을 어떻게 지킬 수 있을까? 라는 단계를 거쳐서
+                  여러분들에게 계약전 보증금 지킴이 리포트 제공
+                </p>
+              </div>
+            </div>
+            <div class="info1_box">
+              <div class="info1_innerText">
+                <p>#2</p>
+                <p class="info1_innerText_title">보증금 지킴이 리포트 확인</p>
+                <p class="info1_innerText_ex">
+                  내 보증금을 어떻게 지킬 수 있을까? 라는 단계를 거쳐서
+                  여러분들에게 계약전 보증금 지킴이 리포트 제공
+                </p>
+              </div>
+            </div>
+            <div class="info1_box">
+              <div class="info1_innerText">
+                <p>#3</p>
+                <p class="info1_innerText_title">체크리스트를 따라 계약 진행</p>
+                <p class="info1_innerText_ex">
+                  내 보증금을 어떻게 지킬 수 있을까? 라는 단계를 거쳐서
+                  여러분들에게 계약전 보증금 지킴이 리포트 제공
+                </p>
+              </div>
+            </div>
+            <div class="info1_box">
+              <div class="info1_innerText">
+                <p>#4</p>
+                <p class="info1_innerText_title">실시간 등기 변동 알림</p>
+                <p class="info1_innerText_ex">
+                  내 보증금을 어떻게 지킬 수 있을까? 라는 단계를 거쳐서
+                  여러분들에게 계약전 보증금 지킴이 리포트 제공
+                </p>
+              </div>
+            </div>
+            <div class="info1_box">
+              <div class="info1_innerText">
+                <p>#5</p>
+                <p class="info1_innerText_title">계약 기간 안심하고 살기</p>
+                <p class="info1_innerText_ex">
+                  내 보증금을 어떻게 지킬 수 있을까? 라는 단계를 거쳐서
+                  여러분들에게 계약전 보증금 지킴이 리포트 제공
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- info 4 -->
+        <div class="info4">
+          <div class="info4_content">
+            <img class="phoneImg" src="./images/Phone.png" alt="" />
+          </div>
+          <div class="info4_content">
+            <p class="info4_greenTxt">리포트</p>
+            <p class="info4_titleTxt">
+              등기부 등본 등을 분석한<br />
+              보증금 지킴이 리포트
+            </p>
+            <p class="info4_mainTxt">
+              어려운 부동산 법률 용어가 아닌, 누구나 쉽게 이해 할 수 있는 보증금
+              지킴이 리포트 제공
+            </p>
+          </div>
+        </div>
+        <div class="info4">
+          <div class="info4_content">
+            <p class="info4_greenTxt">절차</p>
+            <p class="info4_titleTxt">
+              보증금 보호를 위한,
+              <br />
+              체크리스트
+            </p>
+            <p class="info4_mainTxt">
+              전세 사기 당하지 않기 위해 반드시 확인해야 할 체크리스트를
+              제공합니다.
+            </p>
+          </div>
+          <div class="info4_content">
+            <img class="phoneImg" src="./images/Phone-2.png" alt="" />
+          </div>
+        </div>
+        <div class="info4">
+          <div class="info4_content">
+            <img class="phoneImg" src="./images/Phone-3.png" alt="" />
+          </div>
+          <div class="info4_content">
+            <p class="info4_greenTxt">알림</p>
+            <p class="info4_titleTxt">
+              등기부 등본 변동에 따른
+              <br />실시간 알리미
+            </p>
+            <p class="info4_mainTxt">
+              어떤 말도 듣지 못 했는데 집 주인이 바뀌었다고? 세이프홈즈가 즉각
+              알려드립니다.
+            </p>
+
+            <div id="msgWrap">
+              <!-- 메세지 -->
+              <div class="msgDiv">
+                <div class="msgHeadDiv">
+                  <div class="msgFrom">
+                    <img class="msgImg" src="./images/Messages.png" alt="" />
+                    <p class="msgFromText">세이프홈즈</p>
+                  </div>
+                  <div>
+                    <p class="msgFromText">now</p>
+                  </div>
+                </div>
+                <div class="msgMainDiv">
+                  <p class="msgTitle">등기부 등본이 변동되었어요!</p>
+                  <p class="msgText">
+                    방금 전 등기부 등본이 변경되었는데, 세이프홈즈와 함께 같이
+                    확인해보시겠어요?
+                  </p>
+                </div>
+              </div>
+              <div class="msgDiv">
+                <div class="msgHeadDiv">
+                  <div class="msgFrom">
+                    <img class="msgImg" src="./images/Messages.png" alt="" />
+                    <p class="msgFromText">세이프홈즈</p>
+                  </div>
+                  <div>
+                    <p class="msgFromText">now</p>
+                  </div>
+                </div>
+                <div class="msgMainDiv">
+                  <p class="msgTitle">헉! 방금 무언가 변경되었는데요?</p>
+                  <p class="msgText">
+                    세이프홈즈가 방금 등기부 등본이 변경된 사실을 알아냈어요!
+                    어떤 부분이 바뀌었는지 간단하게 정리해서 알려드릴게요.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- info5 -->
+      <div id="info1">
+        <div id="info1_title">
+          <h3 class="TitleText">
+            세이프홈즈, <string>서비스 가격은 어떻게 될까요?</string>
+          </h3>
+        </div>
+        <div id="info1_content">
+          <div class="info5_box">
+            <div class="info1_innerText">
+              <p class="info5_Title">
+                전/월세 보증금<br />
+                지킴이 리포트
+              </p>
+              <p class="info1_innerText_ex">
+                해당 플랜은 여러분을 위해 리포트를 제공합니다. 실제로 이
+                리포트는 언제 어디서든지 사용할 수 있고 그렇습니다.
+              </p>
+              <p class="info5_price">80,000 KRW</p>
+              <p class="info1_innerText_ex">1회 50,000원 / 1주 80,000원</p>
+              <p class="info5_btn">지금 바로 사용하기</p>
+            </div>
+          </div>
+          <div class="info5_box">
+            <div class="info1_innerText">
+              <p class="info5_Title">
+                전/월세 보증금 <br />
+                지킴이 리포트
+              </p>
+              <p class="info1_innerText_ex">
+                해당 플랜은 여러분을 위해 리포트를 제공합니다. 실제로 이
+                리포트는 언제 어디서든지 사용할 수 있고 그렇습니다.
+              </p>
+              <p class="info5_price">80,000 KRW</p>
+              <p class="info1_innerText_ex">1회 50,000원 / 1주 80,000원</p>
+              <p class="info5_btn">지금 바로 사용하기</p>
+            </div>
+          </div>
+          <div class="info5_box">
+            <div class="info1_innerText">
+              <p class="info5_Title">
+                전/월세 보증금 <br />
+                지킴이 리포트
+              </p>
+              <p class="info1_innerText_ex">
+                해당 플랜은 여러분을 위해 리포트를 제공합니다. 실제로 이
+                리포트는 언제 어디서든지 사용할 수 있고 그렇습니다.
+              </p>
+              <p class="info5_price">80,000 KRW</p>
+              <p class="info1_innerText_ex">1회 50,000원 / 1주 80,000원</p>
+              <p class="info5_btn">지금 바로 사용하기</p>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top: 30px" class="info1_btnDiv">
+          <p class="info1_btn">
+            <strong>원하시는 플랜이 없다면 문의주세요! ></strong>
+          </p>
+        </div>
+      </div>
+      <!-- </div>  -->
+      <!-- infoWrap end. -->
+
+      <!-- review div -->
+      <div class="reviewWrap">
+
+        <h3 class="TitleText">세이프홈즈, 없었으면 큰일 날 뻔했어요!</h3>
+
+        <div class="review_slider">
+          <div class="review_box">
+            <!-- 프로필 -->
+            <div class="review_profile">
+              <div>
+                <img src="./images/Oval.svg" alt="" />
+              </div>
+              <div class="profile_name">
+                <p><strong>홍길동님</strong></p>
+                <p>전/월세 보증금 지킴이 리포트</p>
+              </div>
+            </div>
+            <!-- 후기 -->
+            <div class="review_txt">
+              <span>
+                공인중개사가 계약을 너무 서두르는 느낌이 들어 불안했는데,
+                세이프홈즈를 통해서 리포트를 받아보니 아니나 다를까 위험요소가
+                너무 큰 매물이었습니다. 근저당이 너무 높게 잡혀있었고, 보증보험
+                적합 대상도 아니라 경매로 넘어가게 되면 보증금을 돌려받기 힘들
+                것 같아 해당 매물 계약을 포기하고, 더 안전한 매물을 찾아서
+                계약할 수 있었습니다.
+              </span>
+            </div>
+          </div>
+
+          <div class="review_box">
+            <!-- 프로필 -->
+            <div class="review_profile">
+              <div>
+                <img src="./images/Oval.svg" alt="" />
+              </div>
+              <div class="profile_name">
+                <p><strong>홍길동님</strong></p>
+                <p>전/월세 보증금 지킴이 리포트</p>
+              </div>
+            </div>
+            <!-- 후기 -->
+            <div class="review_txt">
+              <span>
+                공인중개사가 계약을 너무 서두르는 느낌이 들어 불안했는데,
+                세이프홈즈를 통해서 리포트를 받아보니 아니나 다를까 위험요소가
+                너무 큰 매물이었습니다. 근저당이 너무 높게 잡혀있었고, 보증보험
+                적합 대상도 아니라 경매로 넘어가게 되면 보증금을 돌려받기 힘들
+                것 같아 해당 매물 계약을 포기하고, 더 안전한 매물을 찾아서
+                계약할 수 있었습니다.
+              </span>
+            </div>
+          </div>
+
+          <div class="review_box">
+            <!-- 프로필 -->
+            <div class="review_profile">
+              <div>
+                <img src="./images/Oval.svg" alt="" />
+              </div>
+              <div class="profile_name">
+                <p><strong>홍길동님</strong></p>
+                <p>전/월세 보증금 지킴이 리포트</p>
+              </div>
+            </div>
+            <!-- 후기 -->
+            <div class="review_txt">
+              <span>
+                공인중개사가 계약을 너무 서두르는 느낌이 들어 불안했는데,
+                세이프홈즈를 통해서 리포트를 받아보니 아니나 다를까 위험요소가
+                너무 큰 매물이었습니다. 근저당이 너무 높게 잡혀있었고, 보증보험
+                적합 대상도 아니라 경매로 넘어가게 되면 보증금을 돌려받기 힘들
+                것 같아 해당 매물 계약을 포기하고, 더 안전한 매물을 찾아서
+                계약할 수 있었습니다.
+              </span>
+            </div>
+          </div>
+
+          <div class="review_box">
+            <!-- 프로필 -->
+            <div class="review_profile">
+              <div>
+                <img src="./images/Oval.svg" alt="" />
+              </div>
+              <div class="profile_name">
+                <p><strong>홍길동님</strong></p>
+                <p>전/월세 보증금 지킴이 리포트</p>
+              </div>
+            </div>
+            <!-- 후기 -->
+            <div class="review_txt">
+              <span>
+                공인중개사가 계약을 너무 서두르는 느낌이 들어 불안했는데,
+                세이프홈즈를 통해서 리포트를 받아보니 아니나 다를까 위험요소가
+                너무 큰 매물이었습니다. 근저당이 너무 높게 잡혀있었고, 보증보험
+                적합 대상도 아니라 경매로 넘어가게 되면 보증금을 돌려받기 힘들
+                것 같아 해당 매물 계약을 포기하고, 더 안전한 매물을 찾아서
+                계약할 수 있었습니다.
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="info1_btnDiv">
+        <p class="info1_btn"><strong>후기 진위여부 파악하러 가기 ></strong></p>
+        </div>
+      </div>
+    </main>
+
+    <!-- bottom banner -->
+    <div class="btm_banner">
+      <p class="mainText">내 보증금, 안전하게 보호하려면 지금 시작하세요</p>
+      <p style="text-align: center">
+        <a href="" class="bottomLink">지금 바로 시작하기</a>
+      </p>
+    </div>
+
+    <!-- footer -->
+    <footer>
+      <div>
+        <p class="footer_title">(주)세이프홈즈</p>
+        <p class="footer_txt">
+          사업자 등록 번호 : 250-26-01109 | 대표 : 정동훈 <br />
+          경기도 성남시 수정구 대왕판교로 815 기업지원허브 혁신기술존 260-3호<br />
+          문의 메일 : safehomes.kr@gmail.com
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

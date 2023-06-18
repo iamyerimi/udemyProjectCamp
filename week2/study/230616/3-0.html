@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3-0</title>
+
+
+  </head>
+
+  <body>
+    <!-- getElementById  -->
+    <h1>getElementById</h1>
+    <p id="demo-a"></p>
+    <hr />
+
+    <!-- getElementByClassName -->
+    <h1>getElementByClassName</h1>
+    <div class="example">Element1</div>
+    <div class="example collect">Element2</div>
+    <hr />
+
+    <!-- getElementByName -->
+    <h1>getElementByName</h1>
+    <p>First Name: <input name="fname" type="text" value="Michael" /></p>
+    <p>Last Name: <input name="lname" type="text" value="Doug" /></p>
+    <p>The tag name of the first element with the name "fname" is:</p>
+    <p id="demo-b"></p>
+    <hr />
+
+    <!-- getElementByTagName -->
+    <h1>getElementByTagName</h1>
+    <p>An unordered list:</p>
+    <ul>
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ul>
+    <p>The innerHTML of the second li element is:</p>
+    <p id="demo-c"></p>
+    <hr />
+
+    <!-- counter -->
+    <h1>counter</h1>
+    <h2 id="counter">0</h2>
+    <button id="increase">+1</button>
+    <button id="decrease">-1</button>
+    <hr />
+
+    <!-- onChange 함수 설명 event.target.value -->
+    <label for="name">이 름</label>
+    <input id="name" type="text" />
+
+
+    <script>
+
+        document.getElementById("demo-a").innerHTML = ("Hello world!");
+
+        let getByClass = document.getElementsByClassName("example")
+        getByClass[0].innerHTML = ("Hello World!");
+        
+        let getByClass2 = document.getElementsByClassName("example collect")
+        getByClass2[0].innerHTML = ("Hello World!");
+
+
+        let getByName = document.getElementsByName("fname");
+        document.getElementById("demo-b").innerHTML = getByName[0].tagName;
+
+        //javascript 함수(ES6 추가, arrow function?)
+        //아래의 add와 add2는 같은 함수에요
+        function add(a,b){
+            return a+b;
+        }
+        const sum = add(1,2);
+        console.log("-------sum1 : " + sum);
+
+        const add2 = (a,b) =>{
+            return a+b;
+        }
+        const sum2 = add2(1,2);
+        console.log("-------sum2 : " + sum2)
+
+
+        // javascript 객체: 비구조화 할당
+        const ironMan = {
+            name: "Tony",
+            actor: "Robert",
+            alias: "iron man"
+        }
+        const {name, actor, alias} = ironMan;
+        console.log("name: " + name);
+        console.log("actor: " + actor);
+        console.log("alias: " + alias);
+
+        //이게 모니?
+        const onChange = (event) =>{
+            const {target:{value}} = event;
+            console.log("------value : " + value);
+        }
+
+        // 배열
+        let arr = [1234, 'test', true];
+        arr.length = 5;
+        arr[5] = 'apple';
+        arr.push('banana');
+        console.log(arr);
+    </script>
+  </body>
+</html>
