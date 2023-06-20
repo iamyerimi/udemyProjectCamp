@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>과제4</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <!-- 
+        vanilla js로 배경이미지 랜덤 변경
+        vanilla js로 인사 만들기
+        vanilla js로 시계 만들기
+     -->
+
+
+    <div class="wrap" id="">
+      <div>
+        <img width="100%" id="image" src="../img/img1.jpg" alt="" />
+      </div>
+      <div class="innerWrap">
+        <div>
+          <p id="clock"></p>
+        </div>
+        <div class="inputDiv">
+          <input
+            class="active"
+            id="writeName"
+            type="text"
+            placeholder="이름을 입력하세요."
+          />
+        </div>
+        <div>
+          <p class="hidden" id="greeting">
+            안녕하세요, <span id="addName"></span>님!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 스크립트 -->
+    <script src="./script.js"></script>
+
+  </body>
+</html>
