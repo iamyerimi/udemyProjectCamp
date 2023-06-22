@@ -6,20 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>과제4</title>
     <!-- css -->
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <!-- 
+      230620 과제
         vanilla js로 배경이미지 랜덤 변경
         vanilla js로 인사 만들기
         vanilla js로 시계 만들기
+
+        230622 과제
+        1. vanilla js로 할 일 목록 만들기
+        2. vanilla js로 내 위치의 날씨 만들기
      -->
 
-
     <div class="wrap" id="">
+      <div class="weatherWrap">
+        <img id="icon" src="" alt="" />
+        <p id="weather"></p>
+      </div>
       <div>
         <img width="100%" id="image" src="../img/img1.jpg" alt="" />
       </div>
+      
       <div class="innerWrap">
         <div>
           <p id="clock"></p>
@@ -29,7 +38,7 @@
             class="active"
             id="writeName"
             type="text"
-            placeholder="이름을 입력하세요."
+            placeholder="What's your name?"
           />
         </div>
         <div>
@@ -37,11 +46,18 @@
             안녕하세요, <span id="addName"></span>님!
           </p>
         </div>
+        <div class="TodoWrap">
+          <input
+            id="todo"
+            type="text"
+            placeholder="write down your to-do"
+          />
+          <ul id="todoList"></ul>
+        </div>
       </div>
     </div>
 
     <!-- 스크립트 -->
     <script src="./script.js"></script>
-
   </body>
 </html>
