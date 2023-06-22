@@ -61,30 +61,36 @@ setInterval(updateTime, 1000);
 let todo = document.getElementById("todo");
 let todoList = document.getElementById("todoList");
 
+//todo input에 입력후 엔터시 
 todo.addEventListener("keypress", function (key) {
   if (key.key === "Enter") {
     let todoValue = todo.value;
     console.log(`todovalue: ${todoValue}`);
 
     function createTodo(todoValue) {
+      // create 'li' and insert todoValue into it
       let li = document.createElement("li");
       li.textContent = todoValue;
 
+      // create a button that removes the 'li' when clicked
       let button = document.createElement("button");
       button.textContent = "X";
-
       button.addEventListener("click", function () {
         li.remove();
       });
 
+      // add a class to the button
       button.classList.add("removeBtn");
 
+      // add the button to the 'li'
       li.appendChild(button);
 
       return li;
     }
 
     todoList.appendChild(createTodo(todoValue));
+
+    // clear todo.value
     todo.value = "";
   }
 });
