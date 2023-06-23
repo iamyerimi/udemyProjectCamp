@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn" type="button">click</button>
+    <input id="hello" type="text" onChange="onChange" />
+
+    <script>
+      function circlewidth(r) {
+        let width = r * r * 3.14;
+        return width;
+      }
+      document.write(circlewidth(10));
+
+      function test(e) {
+        console.log(e.target);
+        document.write("hello world");
+      }
+
+      const btn = document.getElementById("btn");
+      const hello = document.getElementById("hello");
+
+      function clickBtn() {
+        console.log("It works!");
+      }
+      btn.addEventListener("click", clickBtn);
+      hello.onchange = function () {
+        let hello1 = hello.value;
+        console.log(hello1);
+      };
+
+      // arrow function
+      function sum(x, y) {
+        return x + y;
+      }
+      let sumArrow = (x, y) => x + y;
+
+      document.write(`<br/>`);
+      document.write(`sum : ${sum(3, 5)} <br/>`);
+      document.write(`sumArrow : ${sumArrow(3, 5)}`);
+
+      // callback function (보강하기)
+      function sum2(x, y, z) {
+        z(x + y);
+        return x + y;
+      }
+      //   function documentWrite() {
+      //     document.write("callback func", s);
+      //   }
+
+      //
+      let person = {
+        name: "yerim Son",
+        age: 19,
+        nickname: "rimga",
+        lived: {
+          첫번째거주지: "군산",
+          두번째거주지: "전주",
+          세번째거주지: "김포",
+        },
+        height: 185,
+        weight: 33,
+        // func: sum
+      };
+      //   person.belong('김포');
+
+      document.write(`제 이름은 ${person.name}입니다`);
+      document.write(`my nickname is ${person.nickname}.`);
+      document.write(`my name is ${person["name"]}.`);
+      document.write(`<br/>`);
+      document.write(`<hr/>`);
+
+      //array
+      let fruit = ["apple", "peach", "melon", "banana", "mango"];
+      document.write(`과일: ${fruit}`);
+      document.write(`<br/>`);
+
+      // 내장함수 : pop()
+      let pop_fruit = fruit.pop();
+      document.write(`과일 pop: ${pop_fruit}`);
+      document.write(`<br/>`);
+      document.write(`과일: ${fruit}`);
+      document.write(`<br/>`);
+
+      // 내장함수 : push()
+      document.write(`과일 push: ${fruit.push(pop_fruit)}`);
+      document.write(`<br/>`);
+      document.write(`과일: ${fruit}`);
+      document.write(`<br/>`);
+
+      // indexof, lastIndexOf
+      let txt = "ajkdjfiwWQWEOIFUOEouefjalkjseiufjvkldjbklajwe";
+      document.write(txt);
+      document.write(`<br/>`);
+      document.write(`indexOf f : ${txt.indexOf("f")}`);
+      document.write(`<br/>`);
+      document.write(`lastIndexOf f : ${txt.lastIndexOf("f")}`);
+      document.write(`<br/>`);
+      document.write(`toLowerCase f : ${txt.toLowerCase()}`);
+
+      let sentence = "I love Javascript!";
+      console.log(sentence.lastIndexOf("love"));
+
+      //배열의 요소들을 모두 이어붙인 새로운 문자열을 반환하는 함수를 작성하세요.
+      //   let answer = strings.concat(s);
+      //   console.log(`answer: ${answer}`);
+
+      //   function concateString(arr){
+      //     return arr.concat().join("");
+      //   }
+      //   const strings = ['Hello', ' ', 'World', '!'];
+      //   const strings2 = ['Hello2', ' ', 'World', '!'];
+      //   const strings3 = ['Hello3', ' ', 'World', '!'];
+
+      let txt2 = "ABCDEFGHIJKLMNOPQRXTUVWXYZ";
+      document.write(`<br/>`);
+      document.write(txt.includes("ABC"), "<br/>");
+      document.write(txt.startsWith("ABCD"), "<br/>");
+      document.write(txt.startsWith("BCD"), "<br/>");
+      document.write(txt.endsWith("WIR"), "<br/>");
+
+      //
+      // let score = 69;
+      // let money = 0;
+
+      // score = prompt('몇 점이니');
+
+      // if(score > 90){
+      //     document.write(`참 잘했어요. <br/>`);
+      //     momey += 10000;
+      // }else if(score > 80){
+      //     document.write(`잘했어요. <br/>`);
+      //     momey += 5000;
+      // }else if(score > 70){
+      //     document.write(`그냥 했습니다. <br/>`);
+      //     momey += 1000;
+      // }else{
+      //     money = 0;
+      // }
+      // document.write(`상금: ${money}`);
+
+      // 삼항연산자
+      let x = 3;
+      x == 4 ? document.write("ok") : document.write("not okay");
+
+
+      //
+      let score = 91;
+      let money = 10000;
+
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <div id="props"></div>
+    
+    <script type="text/babel">
+        //babel 사용 시 type 지정 필수
+        //babel을 씀으로서 최신 자바스크립트를 이해할 수 있게 되는거다.
+
+       const root = document.getElementById("root")
+            // ReactDOM.render(React.createElement("h1", null, "hello!"),root);
+
+            function MyComponent(){
+                return React.createElement("div", null, "함수형 컴포넌트입니다.");
+            }
+            ReactDOM.render(<MyComponent />, root);
+            //babel을 썼더니 함수형 컴포넌트까지 바로 넣을 수 있다.??
+
+
+            //props
+            const props = document.getElementById("props")
+
+            function Greeting(props){
+                return React.createElement("div", null, `안녕하세요, ${props.name} 님!`);
+            }
+            // ReactDOM.render(<Greeting name={'손예림'} />, props);
+            ReactDOM.render(React.createElement(Greeting, {name: "예리미"}), props);
+
+    </script>
+</body>
+</html>

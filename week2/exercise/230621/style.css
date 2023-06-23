@@ -1,0 +1,89 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 300px;
+  }
+
+  header {
+    padding: 20px 0;
+  }
+  /* .profilePic img {
+    border-radius: 50%;
+  } */
+
+   .profilePic img{
+    border-radius: 50%;
+    border: 10px solid transparent;
+    background-image: linear-gradient(#fff, #fff),
+      linear-gradient(to right, red 0%, orange 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    
+  } 
+
+  .info {
+    margin-bottom: 20px;
+  }
+  .info ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+  }
+
+  .info ul li {
+    display: inline-block;
+    margin: 10px;
+  }
+
+  #myKeyword {
+    width: 100%;
+    border: 1px dashed gray;
+    padding: 15px 0;
+    box-sizing: border-box; /* 박스 크기에 padding 포함 */
+  }
+
+  .myKeyword:hover{
+    cursor: pointer;
+  }
+
+  #myKeywordWrap{
+    display: inline-block;
+
+  }
+
+  .myKeyword{
+    display: flex;
+    background-color: lightpink;
+    padding: 5px;
+    justify-content: space-between;
+  }
+  
+  .greetingMent {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.7;
+    /* letter-spacing: 0.2px; */
+  }
+
+  #hi {
+    font-size: large;
+    font-weight: bold;
+  }
+
+  .infoDetails {
+    display: none;
+  }
+
+  .active {
+    display: block;
+  }
+
+  footer{
+    padding: 50px;
+  }

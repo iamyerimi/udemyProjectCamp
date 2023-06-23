@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+  </head>
+  <body>
+    <div id="root">0</div>
+    <div id="total"></div>
+    <div id="app"></div>
+
+    <script type="text/babel">
+      const root = document.getElementById("root");
+
+      function Counter() {
+        const [count, setCount] = React.useState(0);
+        return (
+          <div>
+            <p>{count}</p>
+            <button onClick={() => setCount(count + 1)}>+1</button>
+            <button onClick={() => setCount(count - 1)}>-1</button>
+          </div>
+        );
+      }
+
+      ReactDOM.render(<Counter />, root);
+
+      //total
+      let a = 0;
+      const total = document.getElementById("total");
+      //   const h1 = React.createElement(
+      //     "h1",
+      //     { id: "h1", style: { color: "blue" } },
+      //     "Total Clicks: 0"
+      //   );
+
+      //다른방법 h1
+      const Title = (
+        <h1 id="h1" style={{ color: "blue" }}>
+          Total clicks: 0
+        </h1>
+      );
+      // const button = React.createElement(
+      //   "button",
+      //   {
+      //     onClick: () => {
+      //       a = a + 1;
+      //       console.log(a);
+      //     },
+      //   },
+      //   "Click me"
+      // );
+
+      //다른방법 button
+      const Button = (
+        <button
+          onClick={() => {
+            a = a + 1;
+            console.log(a);
+          }}
+        >
+          click me!
+        </button>
+      );
+
+      // const container = React.createElement("div", null, [h1, button]);
+      // 다른방법
+      const container = React.createElement("div", null, [
+        Title,
+        Button,
+        Button,
+        Button,
+        Button
+      ]);
+      ReactDOM.render(container, total);
+
+      //3rd
+      const app = document.getElementById("app");
+      function App(){
+        const [counter, setCounter] = React.useState(100);
+        const onClick = () => {
+            setCounter((counter) => counter + 1);
+        }
+        return(
+            <div>
+            <h1>Total Clicks: {counter}</h1>
+            <button onClick={onClick}>Click me!!</button>
+            </div>
+        );
+      }
+      ReactDOM.render(<App />, app);
+    </script>
+  </body>
+</html>

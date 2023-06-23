@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>230621 실습1</title>
+    <!-- <script
+      src="https://kit.fontawesome.com/69f5245cad.js"
+      crossorigin="anonymous"
+    ></script> -->
+    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="wrap"></div>
+
+    <script type="text/babel">
+      let wrap = document.getElementById("wrap");
+
+      function App() {
+        return (
+          <>
+            <header>
+              <h1>Hi! I'm Yerim, a FE developer.</h1>
+            </header>
+
+            <div className="info" id="info1">
+              <div className="profilePic">
+                <img width="300px" src="./img/profile.jpeg" alt="" />
+              </div>
+
+              <div id="myLink">
+                <ul>
+                  <li>
+                    <span>
+                      <i
+                        style={{ marginRight: "5px" }}
+                        className="fa-brands fa-blogger"
+                      ></i>
+                    </span>
+                    <a href="https://iamyerimi.github.io">BLOG</a>
+                  </li>
+                  <li>
+                    <i
+                      style={{ marginRight: "5px" }}
+                      className="fa-brands fa-github"
+                    ></i>
+                    <a href="https://github.com/iamyerimi">GITHUB</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="info">
+              <div className="greetingMent">
+                <span id="hi">
+                  안녕하세요! 프론트엔드 개발자 손예림입니다.{" "}
+                </span>
+                <br />
+                열정 넘치는 주니어 FE 개발자로서, 새로운 기술과 사용자 경험에
+                집중하며 웹 개발에 몰두하고 있습니다.
+                <br />
+                끊임없는 학습과 자기계발을 통해 새로운 기술과 도구에 대한
+                이해도를 높이고, 문제 해결 능력을 향상시키고 있습니다. <br />
+                팀과의 협업을 통해 목표 달성을 위해 적극적으로 참여하며,
+                효율적이고 창의적인 솔루션을 제공하기 위해 노력합니다. <br />
+                동시에, 성장과 발전을 위해 끊임없이 도전하며, 주니어
+                개발자로서의 역량을 키우기 위해 열심히 노력하고 있습니다.
+                <br />
+              </div>
+            </div>
+            <hr />
+
+            <div className="info" id="myKeyword">
+              <div id="myKeywordWrap">
+                <span> keyword click! </span>
+                <ul>
+                  <li className="myKeyword" id="mbti">
+                    MBTI
+                  </li>
+                  <li className="myKeyword" id="hometown">
+                    김포시민
+                  </li>
+                  <li className="myKeyword" id="music">
+                    랩과 R&amp;B
+                  </li>
+                  <li className="myKeyword" id="color">
+                    파란색
+                  </li>
+                  <li className="myKeyword" id="hobby">
+                    독서와 산책
+                  </li>
+                  <li className="myKeyword" id="food">
+                    햄버거
+                  </li>
+                  <li className="myKeyword" id="sweets">
+                    탕후루
+                  </li>
+                  <li className="myKeyword" id="sea">
+                    바다
+                  </li>
+                </ul>
+              </div>
+
+              <div className="info">
+                <div className="infoDetails" id="mbtiDetails">
+                  <p>정상❤️</p>
+                  <img width="300px" src="./img/dance.jpeg" alt="" />
+                </div>
+                <div className="infoDetails" id="hometownDetails">
+                  <p>출신지: 김포시민</p>
+                  <p>김포시에 대한 설명 내용입니다.</p>
+                </div>
+                <div className="infoDetails" id="musicDetails">
+                  <p>좋아하는 음악: 랩과 R&amp;B</p>
+                  <p>최근 다시 듣는 노래입니다. 드라이브 할 때 짱👍</p>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/YVHwK95-pGU"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div className="infoDetails" id="colorDetails">
+                  <p>좋아하는 색상: 파란색</p>
+                  <img width="300px" src="./img/blue.jpg" alt="" />
+                </div>
+                <div className="infoDetails" id="hobbyDetails">
+                  <p>취미: 독서와 산책</p>
+                  <p>취미에 대한 설명 내용입니다.</p>
+                </div>
+                <div className="infoDetails" id="foodDetails">
+                  <p>좋아하는 음식: 햄버거</p>
+                  <p>월요일 첫 수업 후 먹은 쉑쉑버거🍔</p>
+                  <img width="300px" src="./img/햄버거.jpeg" alt="" />
+                </div>
+                <div className="infoDetails" id="sweetsDetails">
+                  <p>좋아하는 간식: 탕후루</p>
+                  <p>최근 사진이 없어 일러스트 외주 맡겼어요</p>
+                  <img width="300px" src="./img/탕후루.jpg" alt="" />
+                </div>
+                <div className="infoDetails" id="seaDetails">
+                  <p>좋아하는 장소: 바다</p>
+                  <img width="500px" src="./img/바다.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+            <footer>
+              <p>© 2023 Yerim Son. All rights reserved.</p>
+            </footer>
+          </>
+        );
+      }
+      ReactDOM.render(<App />, wrap);
+
+      function MyKeyword() {
+        const [activeDetails, setActiveDetails] = useState(null);
+
+        useEffect(() => {
+          const handleItemClick = (itemId) => {
+            setActiveDetails(itemId);
+          };
+
+          const keywordItems = document.querySelectorAll(".myKeyword");
+          keywordItems.forEach((item) => {
+            item.addEventListener("click", () => {
+              const itemId = item.getAttribute("id");
+              const targetDetails = document.getElementById(itemId + "Details");
+
+              const infoDetails = document.querySelectorAll(".infoDetails");
+              infoDetails.forEach((details) => {
+                details.classList.remove("active");
+              });
+
+              targetDetails.classList.add("active");
+            });
+          });
+
+          return () => {
+            keywordItems.forEach((item) => {
+              item.removeEventListener("click", handleItemClick);
+            });
+          };
+        }, []);
+
+        let infoDetails = document.querySelectorAll(".infoDetails")
+        return (
+            <>
+           infoDetails.onClick{() => alert("hi")}
+           </>
+        );
+      }
+
+      ReactDOM.render(<MyKeyword />);
+    </script>
+  </body>
+</html>

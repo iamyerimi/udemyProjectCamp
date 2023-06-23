@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main Page</title>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <!-- React CDN -->
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+
+    <!-- Babel CDN (for JSX support) -->
+    <script src="https://unpkg.com/@babel/standalone@7.12.7/babel.min.js"></script>
+
+    <script type="text/babel">
+      // 메인 페이지 컴포넌트
+      function MainPage() {
+        return (
+          <div>
+            <header>
+              <h1>가고싶은 여행지를 검색해봐요!</h1>
+            </header>
+            <main>
+              <section>
+                <form
+                  action="https://www.goodchoice.kr/product/result"
+                  method="get"
+                  target="_self"
+                >
+                  <label htmlFor="keyword">가고싶은 도시:</label>
+                  <input name="keyword" id="keyword" type="text" />
+                  <button type="submit">검색하기</button>
+                </form>
+              </section>
+            </main>
+            <footer>&copy;여기어때</footer>
+          </div>
+        );
+      }
+
+      // React 컴포넌트를 렌더링합니다.
+      ReactDOM.render(<MainPage />, document.getElementById("root"));
+    </script>
+  </body>
+</html>

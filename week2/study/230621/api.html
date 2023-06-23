@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="weather"></div>
+
+    <script>
+        // how to use weather api
+        // 1. lat, lon의 값을 가져와야 한다.
+        // 2. weather api 접근해서 lat, lon, api key 값을 넣고 우리가 필요한 것을 가져온다.
+        // 3. 가져온 값을 화면에 뿌려준다.
+        // hint: navigator.geolocation.getCurrentPosition, success, error
+
+        const weather = document.getElementById("weather");
+        const API_KEY = 'ecaa8fe3e7715f6d1ae130d4fddee0f9'; //내 거
+        // const API_KEY = '15f8fbf5168d6da001f1e3c2c4b76277'; //강사님 거
+        function getWeather(lat, lon){
+            console.log(lat, lon);
+            fetch(
+                `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`
+            ).then(function (response) {
+                console.log(response);
+                return response.json();
+            }).then(function (json){
+                console.log(json);
+                const temp = json.main.temp;
+                const humidity = json.main.humidity;
+
+                console.log(temp);
+                console.log(humidity);
+
+                weather.innerHTML = `${temp} @ ${humidity}`;
+            })
+        }
+
+        // 성공한 콜백
+        function handleGeoSuccess(pos){
+            // console.log(pos);
+           
+            const latitude  = pos.coords.latitude;
+            const longitude = pos.coords.longitude;
+
+            // console.log(latitude);
+            // console.log(longitude);
+
+            getWeather(latitude, longitude);
+
+        }
+
+        // 실패한 콜백
+        function handleGeoError(){
+            console.log("error");
+        }
+
+        // 초기화
+        // page load 될 때 가장 먼저 실행
+        function init(){
+            navigator.geolocation.getCurrentPosition(handleGeoSuccess, handleGeoError);
+        }
+
+        init();
+    </script>
+
+    <script>
+        
+        function init(){
+            navigator.geolocation.getCurrentPosition(successHandle, errorHandle);
+
+        }
+
+        init()
+
+        function errorHandle(){
+            console.log("error!");
+        }
+
+        function successHandle(pos){
+          let lat =  pos.coords.latitude;
+          let lon =  pos.coords.longitude;
+
+          getweather(lat, lon);
+        }
+
+    </script>
+</body>
+</html>

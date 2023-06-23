@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Image</title>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <!-- React CDN -->
+    <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+
+    <!-- Babel CDN (for JSX support) -->
+    <script src="https://unpkg.com/@babel/standalone@7.12.7/babel.min.js"></script>
+
+    <script type="text/babel">
+      // 이미지 랜덤 변환 컴포넌트
+      function RandomImage() {
+        const images = [
+          "images/01.jpg",
+          "images/02.jpg",
+          "images/03.jpg",
+          "images/04.jpg",
+          "images/05.jpg",
+          "images/06.jpg",
+          // 추가 이미지 URL들을 여기에 추가하세요
+        ];
+
+        const getRandomImage = () => {
+          const randomIndex = Math.floor(Math.random() * images.length);
+          return images[randomIndex];
+        };
+
+        return (
+          <div>
+            <h1>랜덤 이미지</h1>
+            <img
+              src={getRandomImage()}
+              alt="Random Image"
+              style={{ width: "300px" }}
+            />
+          </div>
+        );
+      }
+
+      // React 컴포넌트를 렌더링합니다.
+      ReactDOM.render(<RandomImage />, document.getElementById("root"));
+    </script>
+  </body>
+</html>

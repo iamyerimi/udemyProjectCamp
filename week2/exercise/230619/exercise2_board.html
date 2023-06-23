@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>board</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <!-- 게시판 만들기 -->
+    <!-- 조건: html로 작성된 것, js로 작성된 것 총 2개를 보여주기. -->
+    <h1>예리미의 게시판</h1>
+
+    <div class="Write">
+        <input id="title" type="text" placeholder="제목">
+        <input id="name" type="text" placeholder="작성자">
+        <textarea name="" id="txt" cols="30" rows="10" placeholder="내용을 입력하세요."></textarea>
+        <button type="button" id="post">등록</button>
+    </div>
+
+    <div class="html">
+
+    </div>
+    <div class="js">
+
+    </div>
+    
+    <script>
+        let title = document.querySelector("#title");
+        let name = document.querySelector("#name");
+        let postbtn = document.querySelector("#post");
+
+        let html = document.querySelector("#html");
+        let js = document.querySelector("#js");
+        
+
+        postbtn.addEventListener('click', post());
+
+        function post(){
+            let txt = document.querySelector('#txt').value;
+            let create = document.createElement("div");
+
+            create.appendChild
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div id="profile"></div>
+
+    <script type="text/babel">
+      const root = document.getElementById("root");
+      const profile = document.getElementById("profile");
+
+      // 컴포넌트 합성: 컴포넌트는 자신의 출력에 다른 컴포넌트를 참조할 수 있습니다. (UserProfile in App)
+
+      // tip: props의 이름은 사용될 context가 아닌 컴포넌트 자체의 관점에서 짓는 것을 권장
+      function App(props) {
+        return (
+          <>
+            <h1>hi {props.name}!</h1>
+            <UserProfile name="yerim" age={25} live="Gimpo" />
+            <UserProfile name="Hyonee" age={99} live="Gimpo" />
+            <UserProfile name="JW" age={40} live="Gimpo" />
+          </>
+        );
+      }
+      // ReactDOM.render(<App name="yerim"/>, root);
+      ReactDOM.render(<App />, root);
+
+      function UserProfile({ name, age, live }) {
+        return (
+          <>
+            <h1>name: {name}</h1>
+            <h1>age: {age}</h1>
+            <h1>live: {live}</h1>
+          </>
+        );
+      }
+      // ReactDOM.render(<UserProfile name="yerim" age={25} live="Gimpo" />, root);
+    </script>
+  </body>
+</html>

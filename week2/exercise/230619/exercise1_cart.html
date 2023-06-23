@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+   
+</head>
+<body>
+    <div class="itemWrap">
+        <div class="item" id="item1">
+            <p value="사과">사과</p>
+            <p value="1000">1000</p>
+            <button>add</button>
+        </div>
+        <div class="item" id="item2">
+            <p value="바나나">바나나</p>
+            <p value="2000">2000</p>
+            <button>add</button>
+        </div>
+    </div>
+
+    <div id="cartWrap">
+        <h2>장바구니</h2>
+        <div class="cart">
+    
+        </div>
+    </div>
+
+    <script>
+
+        //1. createElement 사용, 2. appendChild 사용
+
+        // 장바구니에 아이템 추가
+        function addItemToCart(item) {
+            const cart = document.querySelector('.cart');
+            const cartItem = document.createElement('div');
+            // console.log(`cartItem: ${cartItem}`);
+
+            cartItem.classList.add('cartItem');
+            cartItem.innerHTML = `
+                <p>${item.name}</p>
+                <p>${item.price}</p>
+            `;
+            cart.appendChild(cartItem);
+        }
+    
+        // 아이템 클릭 시 장바구니에 추가
+        const items = document.querySelectorAll('.item');
+        items.forEach(item => {
+            item.querySelector('button').addEventListener('click', () => {
+                const name = item.querySelector('p:nth-child(1)').getAttribute('value');
+                const price = item.querySelector('p:nth-child(2)').getAttribute('value');
+                addItemToCart({ name, price });
+            });
+        });
+    </script>
+</body>
+</html>

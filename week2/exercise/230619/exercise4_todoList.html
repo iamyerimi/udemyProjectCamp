@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>todo list</title>
+  </head>
+  <body>
+    <div>
+      <input id="todo" type="text" placeholder="할 일을 입력하세요." />
+      <input id="add" type="button" value="add" />
+    </div>
+
+    <div id="todoList"></div>
+
+    <script>
+      let addbtn = document.querySelector("#add");
+      let todoList = document.querySelector("#todoList");
+
+      //addToList
+      function addToList(todo) {
+        //입력된 todo
+        let div = document.createElement("div");
+
+        div.textContent = todo;
+        todoList.appendChild(div);
+      }
+
+      addbtn.addEventListener("click", function () {
+      let todo = document.querySelector("#todo").value;
+        addToList(todo);
+        console.log(todo);
+      });
+
+      //삭제버튼 만들기
+    </script>
+  </body>
+</html>

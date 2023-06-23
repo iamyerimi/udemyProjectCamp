@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <Style>
+        body {
+        font-family: Arial, sans-serif;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      .chat {
+        border: 1px solid #ccc;
+        padding: 10px;
+        height: 300px;
+        overflow-y: scroll;
+      }
+
+      .chat div {
+        margin-bottom: 5px;
+      }
+
+      .chat div:last-child {
+        margin-bottom: 0;
+      }
+
+      input[type="text"] {
+        padding: 20px;
+        margin-right: 5px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        width: 300px;
+      }
+
+      input[type="button"] {
+        padding: 20px 30px;
+        background-color: #4caf50;
+        border: none;
+        color: #fff;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+
+
+    </Style>
+        
+
+  </head>
+  <body>
+    <h1>실시간 채팅~~~</h1>
+    <div id="wrap">
+    <div class="chat"></div>
+
+    <div class="inputWrap">
+      <input id="nickname" type="text" placeholder="사용자명" /> : 
+      <input id="txt" type="text" placeholder="메세지를 입력하세요." />
+      <input id="btn" type="button" value="send"/>
+    </div>
+</div>
+
+    <script>
+      let btn = document.querySelector("#btn");
+      let chat = document.querySelector(".chat");
+
+      console.log(`nickname: ${nickname}`);
+      console.log(`txt: ${txt}`);
+
+      function send(nickname, txt) {
+        let chatDiv = document.createElement("div");
+        chatDiv.textContent = `${nickname}: ${txt}`;
+
+        console.log(`nickname: ${nickname}`);
+        console.log(`txt: ${txt}`);
+        chat.appendChild(chatDiv);
+      }
+
+      btn.addEventListener("click", function () {
+        let nickname = document.querySelector("#nickname").value;
+        let txt = document.querySelector("#txt").value;
+        send(nickname, txt);
+      });
+    </script>
+  </body>
+</html>

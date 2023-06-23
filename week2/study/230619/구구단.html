@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        // 구구단
+        // for(let i = 2; i<10; i++){
+        //     for(let j = 1; j<10; j++){
+        //         document.write(`${i} * ${j} = ${i*j} <br/>`);
+        //     }
+        // }
+
+        let arr = [10, 20, 30, 40, 50];
+        arr.forEach((e) => console.log(e * 3));
+
+        // 제곱
+        const numbers = [1, 2, 3, 4, 5];
+        const squardNum = numbers.map(function(number){
+            return number ** 2;
+        })
+        console.log(squardNum);
+
+        //
+        function Person(first, last, age){
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+        }
+
+        const myFather = new Person('daehong', 'son', 55);
+        console.log(`myfater: ${myFather.firstName}`);
+
+        //
+        function myDisplayer(values){
+            document.getElementById("demo").innerHTML=values;
+        }
+        function myFirst(){
+            myDisplayer("hello");
+        }
+        function mySecond(){
+            myDisplayer('goodbye');
+        }
+        myFirst()
+        mySecond();
+
+        // 콜백함수?
+        function myCalculator(num1, num2, myCallback){
+            let sum = num1 + num2;
+            myCallback(sum);
+        }
+        
+    </script>
+</body>
+</html>
