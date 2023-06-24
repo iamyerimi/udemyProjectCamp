@@ -1,4 +1,5 @@
 import LoginForm from "components/loginform";
+import RandomNumber from "components/random";
 import TodoList from "components/todolist";
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <>
       <LoginForm />
       <TodoList />
+      <RandomNumber />
     </>
   );
 }
