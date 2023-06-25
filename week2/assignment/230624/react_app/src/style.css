@@ -1,0 +1,115 @@
+body {
+    position: relative;
+    color: #fff;
+    font-family: Arial, sans-serif;
+  }
+
+  .wrap {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+
+  .innerWrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  p {
+    font-size: 24px;
+  }
+
+  .inputDiv {
+    margin: 20px 0;
+  }
+
+  input[type="text"] {
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font-size: 18px;
+    width: 300px;
+    text-align: center;
+    transition: border-color 0.3s ease-in-out;
+
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+
+  input[type="text"]::placeholder {
+    color: #fff;
+    opacity: 0.7;
+  }
+
+  input[type="text"]:focus {
+    outline: none;
+    border-color: #fff;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  #clock {
+    font-size: 80px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+
+  #greeting {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+
+  .removeBtn {
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 3px 30px;
+    padding: 0 5px;
+  }
+
+  #icon{
+    width: 100px;
+  }
+#image{
+  position: relative;
+}
+  .weatherWrap{
+    position: absolute;
+    z-index: 1;
+    left: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background-color: rgba(94, 85, 85, 0.3); 
+    border-radius: 30px;
+    padding: 10px;
+  }
+  #weather{
+    
+    font-size: 15px;
+   
+    margin: 0;
+  }
+  #todoList li{
+
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
