@@ -1,6 +1,7 @@
 import Clock from "components/clock";
 import Greeting from "components/greeting";
 import Image from "components/randomImg";
+import Weather from "components/weather";
 import "style.css";
 
 // 1. React를 이용하여 배경이미지 랜덤 변경
@@ -13,6 +14,7 @@ function App() {
       <Clock />
       <Image />
       <Greeting />
+      <Weather />
     </>
   );
 }
