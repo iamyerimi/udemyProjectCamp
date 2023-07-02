@@ -1,0 +1,25 @@
+.selected {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+  }
+  
+  .selected p {
+    margin-bottom: 10px;
+  }
+  
+  .selected a {
+    color: #007bff;
+  }
+  
+  .selected img {
+    cursor: pointer;
+  }
+  
+  

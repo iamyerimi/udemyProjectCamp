@@ -1,0 +1,57 @@
+/* Chat.module.css */
+
+.chatContainer {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* .messageContainer {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+  } */
+  /* Assuming you have a CSS module file for the component */
+.messageContainer {
+    width: 100%; /* Adjust the width value as per your preference */
+    height: 200px; /* Adjust the height value as per your preference */
+    border: 1px solid #ccc;
+    padding: 10px;
+    overflow-y: auto; 
+    margin-bottom: 30px;/* Enable vertical scrolling if the content exceeds the height */
+  }
+  .message {
+    margin-bottom: 10px;
+  }
+  
+  .username {
+    font-weight: bold;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  
